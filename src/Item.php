@@ -9,6 +9,7 @@ final class Item
     public const AGED_BRIE = 'Aged Brie';
     public const BACKSTAGE_PASSES_TO_A_TAFKAL_80_ETC_CONCERT = 'Backstage passes to a TAFKAL80ETC concert';
     public const SULFURAS_HAND_OF_RAGNAROS = 'Sulfuras, Hand of Ragnaros';
+    public const CONJURED_MANA_CAKE = 'Conjured Mana Cake';
     public const DEFAULT = 'DEFAULT';
 
     private string $name;
@@ -28,6 +29,11 @@ final class Item
     public static function sulfuras(int $sell_in, int $quality): self
     {
         return new self(self::SULFURAS_HAND_OF_RAGNAROS, $sell_in, $quality);
+    }
+
+    public static function conjured(int $sellIn, int $quality): self
+    {
+        return new self(self::CONJURED_MANA_CAKE, $sellIn, $quality);
     }
 
     public static function default(string $name, int $sellIn, int $quality): self
