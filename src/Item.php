@@ -7,33 +7,33 @@ namespace GildedRose;
 final class Item
 {
     public const AGED_BRIE = 'Aged Brie';
-    public const BACKSTAGE_PASSES_TO_A_TAFKAL_80_ETC_CONCERT = 'Backstage passes to a TAFKAL80ETC concert';
-    public const SULFURAS_HAND_OF_RAGNAROS = 'Sulfuras, Hand of Ragnaros';
-    public const CONJURED_MANA_CAKE = 'Conjured Mana Cake';
+    public const BACKSTAGE = 'Backstage passes to a TAFKAL80ETC concert';
+    public const SULFURAS = 'Sulfuras, Hand of Ragnaros';
+    public const CONJURED_MANA = 'Conjured Mana Cake';
     public const DEFAULT = 'DEFAULT';
 
     private string $name;
     private int $sell_in;
     private int $quality;
 
-    public static function agedBrie(int $sell_in, int $quality): self
+    public static function agedBrie(int $sellIn, int $quality): self
     {
-        return new self(self::AGED_BRIE, $sell_in, $quality);
+        return new self(self::AGED_BRIE, $sellIn, $quality);
     }
 
-    public static function backstage(int $sell_in, int $quality): self
+    public static function backstage(int $sellIn, int $quality): self
     {
-        return new self(self::BACKSTAGE_PASSES_TO_A_TAFKAL_80_ETC_CONCERT, $sell_in, $quality);
+        return new self(self::BACKSTAGE, $sellIn, $quality);
     }
 
-    public static function sulfuras(int $sell_in, int $quality): self
+    public static function sulfuras(int $sellIn, int $quality): self
     {
-        return new self(self::SULFURAS_HAND_OF_RAGNAROS, $sell_in, $quality);
+        return new self(self::SULFURAS, $sellIn, $quality);
     }
 
     public static function conjured(int $sellIn, int $quality): self
     {
-        return new self(self::CONJURED_MANA_CAKE, $sellIn, $quality);
+        return new self(self::CONJURED_MANA, $sellIn, $quality);
     }
 
     public static function default(string $name, int $sellIn, int $quality): self

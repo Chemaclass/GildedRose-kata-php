@@ -38,7 +38,7 @@ final class DefaultItemQualityUpdater implements ItemQualityUpdaterInterface
     private function canUpdate(Item $item): bool
     {
         return $item->name() !== Item::AGED_BRIE
-            && $item->name() !== Item::SULFURAS_HAND_OF_RAGNAROS
-            && $item->name() !== Item::BACKSTAGE_PASSES_TO_A_TAFKAL_80_ETC_CONCERT;
+            && $item->name() !== Item::SULFURAS
+            && $item->name() !== Item::BACKSTAGE;
     }
 }

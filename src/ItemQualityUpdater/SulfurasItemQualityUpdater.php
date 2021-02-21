@@ -24,6 +24,6 @@ final class SulfurasItemQualityUpdater implements ItemQualityUpdaterInterface
 
     private function canUpdate(Item $item): bool
     {
-        return $item->name() === Item::SULFURAS_HAND_OF_RAGNAROS;
+        return $item->name() === Item::SULFURAS;
     }
 }

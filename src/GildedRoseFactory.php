@@ -16,9 +16,9 @@ final class GildedRoseFactory
     {
         return new GildedRose([
             Item::AGED_BRIE => new AgedBrieItemQualityUpdater(),
-            Item::BACKSTAGE_PASSES_TO_A_TAFKAL_80_ETC_CONCERT => new BackstageItemQualityUpdater(),
-            Item::SULFURAS_HAND_OF_RAGNAROS => new SulfurasItemQualityUpdater(),
-            Item::CONJURED_MANA_CAKE => new ConjuredItemQualityUpdater(),
+            Item::BACKSTAGE => new BackstageItemQualityUpdater(),
+            Item::SULFURAS => new SulfurasItemQualityUpdater(),
+            Item::CONJURED_MANA => new ConjuredItemQualityUpdater(),
             Item::DEFAULT => new DefaultItemQualityUpdater(),
         ]);
     }

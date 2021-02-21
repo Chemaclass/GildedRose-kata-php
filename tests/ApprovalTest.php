@@ -16,8 +16,7 @@ class ApprovalTest extends TestCase
 
         ob_start();
         require_once __DIR__ . '/../fixtures/texttest_fixture.php';
-        $output = ob_get_contents();
-        ob_end_clean();
+        $output = ob_get_clean();
 
         Approvals::verifyString($output);
     }

@@ -35,7 +35,7 @@ final class BackstageItemQualityUpdater implements ItemQualityUpdaterInterface
 
     private function canUpdate(Item $item): bool
     {
-        return $item->name() === Item::BACKSTAGE_PASSES_TO_A_TAFKAL_80_ETC_CONCERT;
+        return $item->name() === Item::BACKSTAGE;
     }
 
     private function verifyCanUpdate(Item $item): void

@@ -8,7 +8,7 @@ use GildedRose\ItemQualityUpdater\ItemQualityUpdaterInterface;
 
 final class GildedRose
 {
-    /** @var ItemQualityUpdaterInterface[] */
+    /** @var array<string, ItemQualityUpdaterInterface> */
     private array $updaters;
 
     public function __construct(array $updaters)
@@ -19,9 +19,16 @@ final class GildedRose
     public function updateQuality(array $items): array
     {
         return array_map(
-            fn (Item $item) => $this->findUpdater($item)->update($item),
+            fn (Item $item) => $this->updateItemQuality($item),
             $items
         );
+    }
+
+    private function updateItemQuality(Item $item): Item
+    {
+        $updater = $this->findUpdater($item);
+
+        return $updater->update($item);
     }
 
     private function findUpdater(Item $item): ItemQualityUpdaterInterface

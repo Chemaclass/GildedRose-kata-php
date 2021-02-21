@@ -37,6 +37,6 @@ final class ConjuredItemQualityUpdater implements ItemQualityUpdaterInterface
 
     private function canUpdate(Item $item): bool
     {
-        return $item->name() === Item::CONJURED_MANA_CAKE;
+        return $item->name() === Item::CONJURED_MANA;
     }
 }
